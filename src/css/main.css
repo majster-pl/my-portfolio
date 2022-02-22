@@ -1,36 +1,29 @@
-.header-image {
+.header-bg-image {
     background-image: url('../../public/images/bg/wave1.png'), linear-gradient(to right, rgb(26, 57, 232), rgb(194, 25, 152));
     height          : 40rem;
+    min-height      : 50rem;
     position        : relative;
     background-size : cover;
 }
 
-.image-me {
-    border-radius: 80% 20% 81% 19% / 23% 81% 19% 77% !important;
-}
 
-#header-wave {
+.header-bg-bottom-wave {
     position: absolute;
     bottom  : -0.1rem;
 }
 
-.div-center .row {
-    position          : absolute;
-    top               : 25%;
+.header-content {
+    padding-top: 12rem;
 }
 
-img.avatar-wobble {
-    /* margin       : .1em 1em; */
+
+/* Avatar */
+.avatar-wobble {
     border-radius: 80% 20% 81% 19% / 23% 81% 19% 77%;
     transform    : rotate(-2deg);
     animation    : wobble-article 8s ease-in-out alternate infinite;
 }
 
-@media (min-width: 680px) {
-    img.avatar-wobble {
-        float: left;
-    }
-}
 
 @keyframes wobble-article {
     50% {
