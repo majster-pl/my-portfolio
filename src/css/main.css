@@ -1,7 +1,10 @@
+.navbar {
+    min-height: 4rem;
+}
+
 .header-bg-image {
     background-image: url('../../public/images/bg/wave1.png'), linear-gradient(to right, rgb(26, 57, 232), rgb(194, 25, 152));
-    height          : 40rem;
-    min-height      : 50rem;
+    min-height      : 40rem;
     position        : relative;
     background-size : cover;
 }
@@ -13,17 +16,39 @@
 }
 
 .header-content {
-    padding-top: 12rem;
+    padding-top: 7rem;
 }
 
+.header-col {
+    height: 12rem;
+}
+
+.nav-link:hover, .text-link:hover {
+    cursor: pointer;
+}
 
 /* Avatar */
 .avatar-wobble {
+    height       : 12rem;
     border-radius: 80% 20% 81% 19% / 23% 81% 19% 77%;
     transform    : rotate(-2deg);
     animation    : wobble-article 8s ease-in-out alternate infinite;
 }
 
+@media (min-width: 768px) {
+    .header-content {
+        padding-top: 9rem;
+    }
+
+    .avatar-wobble {
+        height: 17rem;
+    }
+
+    .header-bg-image {
+        min-height: 45rem;
+    }
+
+}
 
 @keyframes wobble-article {
     50% {
