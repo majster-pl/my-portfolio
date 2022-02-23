@@ -32,7 +32,7 @@
     height       : 12rem;
     border-radius: 80% 20% 81% 19% / 23% 81% 19% 77%;
     transform    : rotate(-2deg);
-    animation    : wobble-article 8s ease-in-out alternate infinite;
+    animation    : wobble-article 7s ease-in-out alternate infinite;
 }
 
 @media (min-width: 768px) {
@@ -52,11 +52,11 @@
 
 @keyframes wobble-article {
     50% {
-        border-radius: 750px 550px 350px 750px / 350px 750px 550px 450px;
+        border-radius: 750px 550px 350px 750px / 450px 750px 550px 650px;
     }
 
     100% {
-        border-radius: 750px 250px 750px 250px / 250px 750px 250px 750px;
+        border-radius: 750px 250px 750px 250px / 450px 750px 250px 550px;
         transform    : rotate(2deg);
     }
 }
