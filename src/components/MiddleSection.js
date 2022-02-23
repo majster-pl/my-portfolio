@@ -2,6 +2,7 @@ import { Container, Row, Col, Image } from "react-bootstrap"
 import Animate from "react-smooth/lib/Animate"
 import Typist from 'react-text-typist';
 import { Link } from 'react-scroll'
+import Bounce from 'react-reveal/Bounce';
 
 
 const MiddleSection = () => {
@@ -52,11 +53,17 @@ const MiddleSection = () => {
             </div>
             <div id="about" style={{ minHeight: "30rem" }}>
                 <Container>
-                    <h3>About me</h3>
-                    <p>My name is Szymon and I’m based in Bristol UK, some people might also know me as majster-pl. I've began my journey with coding back in 2011 as a hobby by developing Linux desktop applications using GTK for a front-end and Python in the back-end. One of my desktop aplications was <a rel="noreferrer" href="http://linuxg.net/ubuntu-touch-manager-how-to-install-and-test-ubuntu-touch-manager-on-ubuntu-13-04-12-10-12-04/" target="_blank">Ubuntu Touch Manager</a>.
-                    </p>
-                    <p>After my adventure with desktop applications I got involved in open source projects developing mobile application for newly (back then) created operating system <a rel="noreferrer" href="https://en.wikipedia.org/wiki/Ubuntu_Touch" target="_blank">Ubuntu Touch</a> by <a rel="noreferrer" href="https://ubuntu.com/" target="_blank">Cannonical</a>. I was developing applications which you can download for free from <a rel="noreferrer" href="https://open-store.io/?sort=relevance&amp;search=author%3ASzymon%20Waliczek" target="_blank">OpenStore</a> and some of them you can see in <Link className="text-link" to="projects" spy={true} offset={-100}>My Projects</Link>.
-                    </p>
+                    <Bounce bottom cascade>
+                        <h3>About me</h3>
+                        <Bounce bottom delay={800}>
+                            <p>My name is Szymon and I’m based in Bristol UK, some people might also know me as majster-pl. I've began my journey with coding back in 2011 as a hobby by developing Linux desktop applications using GTK for a front-end and Python in the back-end. One of my desktop aplications was <a rel="noreferrer" href="http://linuxg.net/ubuntu-touch-manager-how-to-install-and-test-ubuntu-touch-manager-on-ubuntu-13-04-12-10-12-04/" target="_blank">Ubuntu Touch Manager</a>.
+                            </p>
+                        </Bounce>
+                        <Bounce bottom delay={1300}>
+                            <p>After my adventure with desktop applications I got involved in open source projects developing mobile application for newly (back then) created operating system <a rel="noreferrer" href="https://en.wikipedia.org/wiki/Ubuntu_Touch" target="_blank">Ubuntu Touch</a> by <a rel="noreferrer" href="https://ubuntu.com/" target="_blank">Cannonical</a>. I was developing applications which you can download for free from <a rel="noreferrer" href="https://open-store.io/?sort=relevance&amp;search=author%3ASzymon%20Waliczek" target="_blank">OpenStore</a> and some of them you can see in <Link className="text-link" to="projects" spy={true} offset={-100}>My Projects</Link>.
+                            </p>
+                        </Bounce>
+                    </Bounce>
                 </Container>
             </div>
             <div id="skills" style={{ minHeight: "30rem" }}>
