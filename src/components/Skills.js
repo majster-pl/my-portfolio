@@ -31,7 +31,7 @@ const Skills = ({ id }) => {
                             <Fade key={i} bottom delay={i * 200 + 1000}>
                                 <Col className="" >
                                     <Row className="m-3">
-                                        <Image className="mb-2" src={`/images/logos/new/${item.toLocaleLowerCase().replace(" ", "")}.png`}></Image>
+                                        <Image className="mb-2" src={`/images/logos/${item.toLocaleLowerCase().replace(" ", "")}.png`}></Image>
                                         <p className="fs-5 fw-normal">{item}</p>
                                     </Row>
                                 </Col>

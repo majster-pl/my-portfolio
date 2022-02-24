@@ -1,26 +1,25 @@
-
 $theme-colors: (
-  "primary": #0d6efd,
-  "gray": #333333,
-
-  "darker": #111314,
-  "secondary": #2d3238,
-  "light": #888888,
-  "success": #39a883,
-  "danger": #f73c33,
-  "orange": #ffa349,
-  "info": #ffbb00,
-  "yellow": #fffe00,
-  "lime": #dfea87,
-  "pink": #f00fa6,
-  "light-blue": #32beff,
-  "dark-green": #137265,
-  "background-color": #1b2025,
+    "primary": #0d6efd,
+    "gray": #333333,
+    "secondary": rgb(33, 37, 41),
+    // "darker": #111314,
+    // "secondary": #2d3238,
+    // "light": #888888,
+    // "success": #39a883,
+    // "danger": #f73c33,
+    // "orange": #ffa349,
+    // "info": #ffbb00,
+    // "yellow": #fffe00,
+    // "lime": #dfea87,
+    // "pink": #f00fa6,
+    // "light-blue": #32beff,
+    // "dark-green": #137265,,
 );
 
+$link-color: rgb(194, 41, 255);
+$link-decoration: none;
 
 // Import Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap.scss";
 // @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
-

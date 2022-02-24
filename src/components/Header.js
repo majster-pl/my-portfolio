@@ -18,7 +18,7 @@ const Header = () => {
     }];
 
     return (
-        <Navbar className="shadow " fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar className="shadow bg-secondary" fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Animate steps={steps} className="p-0">
                 <Container>
                     <Navbar.Brand>
