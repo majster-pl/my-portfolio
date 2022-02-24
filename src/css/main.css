@@ -2,28 +2,39 @@
     min-height: 4rem;
 }
 
-.header-bg-image {
+/* INTRO */
+.intro-bg-image {
     background-image: url('../../public/images/bg/wave1.png'), linear-gradient(to right, rgb(26, 57, 232), rgb(194, 25, 152));
-    min-height      : 40rem;
+    min-height      : 45rem;
     position        : relative;
     background-size : cover;
 }
 
-
-.header-bg-bottom-wave {
+.intro-bg-bottom-wave {
     position: absolute;
     bottom  : -0.1rem;
 }
 
-.header-content {
+.intro-content {
     padding-top: 7rem;
 }
 
-.header-col {
+.intro-col {
     height: 12rem;
 }
 
-.nav-link:hover, .text-link:hover {
+/* SKILLS */
+.skills-bg-image {
+    background-image: url('../../public/images/bg/wave1.png'),
+        linear-gradient(to right, rgb(39, 39, 39), rgb(60, 60, 60));
+    min-height     : 25rem;
+    position       : relative;
+    background-size: cover;
+}
+
+
+.nav-link:hover,
+.text-link:hover {
     cursor: pointer;
 }
 
