@@ -45,6 +45,20 @@
     animation    : wobble-article 7s ease-in-out alternate infinite;
 }
 
+
+/* PROJECTS */
+.project-card:hover {
+    cursor: pointer;
+}
+
+.project-bg-image {
+    background-image: url('../../public/images/bg/wave1.png'), linear-gradient(to right, rgb(26, 57, 232), rgb(194, 25, 152));
+    /* min-height      : 45rem;
+    position        : relative; */
+    background-size : cover;
+}
+
+
 @media (min-width: 768px) {
     .header-content {
         padding-top: 9rem;
@@ -73,4 +87,10 @@
 
 .text-justify {
     text-align: justify;
+}
+
+.modal-90w {
+    width        : 80%;
+    /* max-height: 90vh; */
+    max-width    : 100vh !important;
 }

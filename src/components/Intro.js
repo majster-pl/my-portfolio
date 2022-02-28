@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image } from "react-bootstrap"
 import Typist from 'react-text-typist';
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const Intro = ({ id }) => {
 
@@ -20,14 +20,14 @@ const Intro = ({ id }) => {
                                 deletingSpeed={10}
                                 typingSpeed={40}
                                 pauseTime={2000}
-                                sentences={['Hi, my name is Szymon and I\'m a freelance developer based in Bristol UK.', "Check out my recent projects below...", "Get in touch if you are looking for help to build something amazing!"]}
+                                sentences={['Hi, my name is Szymon and I\'m a freelance developer based in Bristol UK.', "Check out some of my recent projects below...", "Get in touch if you are planing to build something amazing and need help!"]}
                             />
                         </p>
                     </Col>
                     <Col md={6} sm={8} className="text-center text-md-end">
-                        <Zoom right delay={1000}>
+                        <Fade delay={500}>
                             <Image className="avatar-wobble m-2" src="/images/me.jpg" />
-                        </Zoom>
+                        </Fade>
                     </Col>
                 </Row>
 

@@ -7,6 +7,7 @@ const Skills = ({ id }) => {
         "Laravel",
         "Html5",
         "CSS3",
+        "Bootstrap",
         "JavaScript",
         "jQuery",
         "PHP",
@@ -15,7 +16,6 @@ const Skills = ({ id }) => {
         "GitHub",
         "Qt",
         "GTK",
-
     ]
 
     return (
@@ -26,18 +26,18 @@ const Skills = ({ id }) => {
                 </Fade>
 
                 <Row className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 text-center">
+                    <Fade bottom>
                     {skillsList.map((item, i) => {
                         return (
-                            <Fade key={i} bottom delay={i * 200 + 1000}>
-                                <Col className="" >
+                                <Col className="" key={i} >
                                     <Row className="m-3">
                                         <Image className="mb-2" src={`/images/logos/${item.toLocaleLowerCase().replace(" ", "")}.png`}></Image>
                                         <p className="fs-5 fw-normal">{item}</p>
                                     </Row>
                                 </Col>
-                            </Fade>
                         )
                     })}
+                    </Fade>
                 </Row>
             </Container>
         </div>

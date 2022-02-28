@@ -5,7 +5,7 @@ import Intro from "./Intro";
 import Skills from "./Skills";
 import Projects from "./Projects";
 
-const MiddleSection = () => {
+const MiddleSection = ({ openAppPreview, setAppPreviewData }) => {
 
 
     return (
@@ -13,7 +13,7 @@ const MiddleSection = () => {
             <Intro id={"intro"} />
             <AboutMe id={"about"} />
             <Skills id={"skills"} />
-            <Projects id={"projects"} />
+            <Projects id={"projects"} openAppPreview={openAppPreview} setAppPreviewData={setAppPreviewData} />
 
             <div id="contact" style={{ minHeight: "30rem" }}>
                 <Container>
