@@ -3,27 +3,17 @@ import MiddleSection from "./components/MiddleSection";
 import './css/main.scss'
 import './css/main.css'
 import { useState } from "react";
-import { Modal, Button, CloseButton, Container } from "react-bootstrap";
 import ModalPreview from "./components/ModalPreview";
 
 function App() {
   const [showAppPreview, setShowAppPreview] = useState(false);
   const [appPreviewData, setAppPreviewData] = useState({
-    header: "header",
-    body: "body",
+    title: "",
+    avatar: "",
+    header: "",
+    body: "",
     skills: [],
-    images: [{
-      original: 'https://picsum.photos/id/1018/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1018/250/150/',
-    },
-    {
-      original: 'https://picsum.photos/id/1015/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1015/250/150/',
-    },
-    {
-      original: 'https://picsum.photos/id/1019/1000/600/',
-      thumbnail: 'https://picsum.photos/id/1019/250/150/',
-    },]
+    images: [],
   });
 
   const openAppPreview = () => {
@@ -42,7 +32,6 @@ function App() {
       <ModalPreview 
         showAppPreview={showAppPreview}
         appPreviewData={appPreviewData}
-        setAppPreviewData={setAppPreviewData}
         closeAppPreview={closeAppPreview}
       />
     </>

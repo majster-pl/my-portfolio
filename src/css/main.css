@@ -47,15 +47,54 @@
 
 
 /* PROJECTS */
-.project-card:hover {
+.project-card:hover, .project-card:active {
     cursor: pointer;
 }
 
+.project-card .project-avatar {
+    -webkit-filter    : grayscale(100%);
+    filter            : grayscale(100%);
+    -webkit-transition: 0.2s ease-in-out;
+    transition        : 0.2s ease-in-out;
+}
+
+.project-card:hover .project-avatar {
+    -webkit-filter: grayscale(0);
+    filter        : grayscale(0);
+}
+
+.project-avatar-spinner,
+.project-avatar {
+    min-height: 20rem;
+}
+
+/* MODAL */
+
+
+@property --myColor1 {
+    syntax       : '<color>';
+    initial-value: rgb(53, 53, 53);
+    inherits     : false;
+}
+
+@property --myColor2 {
+    syntax       : '<color>';
+    initial-value: rgb(26, 26, 26);
+    inherits     : false;
+}
+
+
+.project-card:hover .project-bg-image {
+    --myColor1: rgb(73, 0, 80);
+    --myColor2: rgb(10, 0, 100);
+}
+
 .project-bg-image {
-    background-image: url('../../public/images/bg/wave1.png'), linear-gradient(to right, rgb(26, 57, 232), rgb(194, 25, 152));
-    /* min-height      : 45rem;
-    position        : relative; */
-    background-size : cover;
+    background-image: url('../../public/images/bg/wave3.png'),
+        linear-gradient(to right, var(--myColor1), var(--myColor2));
+    transition     : --myColor1 0.5s ease-in-out, --myColor2 0.5s;
+    background-size: cover;
+    color          : #0e0091;
 }
 
 
@@ -70,6 +109,12 @@
 
     .header-bg-image {
         min-height: 45rem;
+    }
+
+    .modal-90w {
+        width        : 90%;
+        /* max-height: 90vh; */
+        max-width    : 100vh !important;
     }
 
 }
@@ -87,10 +132,4 @@
 
 .text-justify {
     text-align: justify;
-}
-
-.modal-90w {
-    width        : 80%;
-    /* max-height: 90vh; */
-    max-width    : 100vh !important;
 }
