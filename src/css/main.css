@@ -47,11 +47,11 @@
 
 
 /* PROJECTS */
-.project-card:hover, .project-card:active {
+.project-card:hover {
     cursor: pointer;
 }
 
-.project-card .project-avatar {
+.project-card .project-avatar, .project-card:active .project-avatar {
     -webkit-filter    : grayscale(100%);
     filter            : grayscale(100%);
     -webkit-transition: 0.2s ease-in-out;
@@ -84,14 +84,14 @@
 }
 
 
-.project-card:hover .project-bg-image {
+.project-card:hover .project-bg-image, .project-card:active .project-bg-image {
     --myColor1: rgb(73, 0, 80);
     --myColor2: rgb(10, 0, 100);
 }
 
 .project-bg-image {
     background-image: url('../../public/images/bg/wave3.png'),
-        linear-gradient(to right, var(--myColor1), var(--myColor2));
+        linear-gradient(to right, var(--myColor2), var(--myColor1));
     transition     : --myColor1 0.5s ease-in-out, --myColor2 0.5s;
     background-size: cover;
     color          : #0e0091;
