@@ -2,6 +2,11 @@
     min-height: 4rem;
 }
 
+.nav-link:hover,
+.text-link:hover {
+    cursor: pointer;
+}
+
 /* INTRO */
 .intro-bg-image {
     background-image: url('../../public/images/bg/wave1.png'), linear-gradient(to right, rgb(26, 57, 232), rgb(194, 25, 152));
@@ -23,6 +28,13 @@
     height: 12rem;
 }
 
+.avatar-wobble {
+    height       : 12rem;
+    border-radius: 80% 20% 81% 19% / 23% 81% 19% 77%;
+    transform    : rotate(-2deg);
+    animation    : wobble-article 7s ease-in-out alternate infinite;
+}
+
 /* SKILLS */
 .skills-bg-image {
     background-image: url('../../public/images/bg/wave1.png'),
@@ -32,26 +44,38 @@
     background-size: cover;
 }
 
-.nav-link:hover,
-.text-link:hover {
-    cursor: pointer;
+.skill-hover-zoom {
+    overflow: hidden;
 }
 
-/* Avatar */
-.avatar-wobble {
-    height       : 12rem;
-    border-radius: 80% 20% 81% 19% / 23% 81% 19% 77%;
-    transform    : rotate(-2deg);
-    animation    : wobble-article 7s ease-in-out alternate infinite;
+.skill-hover-zoom img {
+    transition: transform .3s ease;
+}
+
+.skill-hover-zoom:hover img {
+    transform: scale(1.15);
 }
 
 
 /* PROJECTS */
+.img-hover-zoom {
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform .5s ease;
+}
+
 .project-card:hover {
     cursor: pointer;
 }
 
-.project-card .project-avatar, .project-card:active .project-avatar {
+.project-card:hover .img-hover-zoom img {
+    transform: scale(1.1);
+}
+
+.project-card .project-avatar,
+.project-card:active .project-avatar {
     -webkit-filter    : grayscale(100%);
     filter            : grayscale(100%);
     -webkit-transition: 0.2s ease-in-out;
@@ -68,9 +92,10 @@
     min-height: 20rem;
 }
 
+
+
+
 /* MODAL */
-
-
 @property --myColor1 {
     syntax       : '<color>';
     initial-value: rgb(53, 53, 53);
@@ -84,7 +109,8 @@
 }
 
 
-.project-card:hover .project-bg-image, .project-card:active .project-bg-image {
+.project-card:hover .project-bg-image,
+.project-card:active .project-bg-image {
     --myColor1: rgb(73, 0, 80);
     --myColor2: rgb(10, 0, 100);
 }
@@ -129,6 +155,8 @@
         transform    : rotate(2deg);
     }
 }
+
+/* OTHERS */
 
 .text-justify {
     text-align: justify;

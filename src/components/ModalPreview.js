@@ -1,4 +1,4 @@
-import { Modal, CloseButton, Button } from "react-bootstrap";
+import { Modal, CloseButton, Button, Spinner } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "../css/swiper.css";
 
 // import required modules
-import { Lazy, Pagination, Navigation } from "swiper";
+import { Autoplay, Lazy, Pagination, Navigation } from "swiper";
 
 const ModalPreview = ({
   //   setShowAppPreview,
@@ -48,10 +48,16 @@ const ModalPreview = ({
       <Modal.Body className="bg-light-gray">
         <Swiper
           className="mySwiper"
-          lazy={true}
+          lazy={{
+            loadOnTransitionStart: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           pagination={pagination}
           navigation={true}
-          modules={[Lazy, Pagination, Navigation]}
+          modules={[Autoplay, Lazy, Pagination, Navigation]}
         >
           {appPreviewData.images.map((item) => {
             return (
@@ -63,7 +69,7 @@ const ModalPreview = ({
                   className="swiper-lazy"
                   alt=""
                 />
-                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                <Spinner className="swiper-lazy-preloader" animation="border" />
               </SwiperSlide>
             );
           })}
@@ -79,7 +85,7 @@ const ModalPreview = ({
         {typeof appPreviewData.live_page !== "undefined" ? (
           <Button
             variant="link"
-            className="border-end pe-3"
+            className="pe-3"
             href={appPreviewData.live_page}
             target="_blank"
             rel="noreferrer"

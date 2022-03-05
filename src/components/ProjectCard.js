@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Col, Image, Container } from "react-bootstrap";
+import { Card, Row, Col, Image, Container, Button } from "react-bootstrap";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { css } from "@emotion/react";
 import PulseLoader from "react-spinners/PulseLoader";
@@ -16,8 +16,21 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
     border-color: red;
   `;
 
+  const onCardClicked = (e) => {
+    e.stopPropagation();
+    openModal();
+  };
+
+  const onLinkClicked = (e, url) => {
+    e.stopPropagation();
+    window.open(url, "_blank").focus();
+  };
+
   return (
-    <Card className="mb-4 project-card shadow rounded-0" onClick={openModal}>
+    <Card
+      className="mb-4 project-card shadow rounded-0"
+      onClick={(e) => onCardClicked(e)}
+    >
       <ProgressiveImage
         src={`/images/apps/${projectData.title
           .toLowerCase()
@@ -26,13 +39,15 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
       >
         {(src, loading) =>
           !loading ? (
-            <img
-              className="card-img-top project-avatar"
-              style={{ opacity: loading ? 0.1 : 1 }}
-              src={src}
-              alt={src}
-              sizes="10"
-            />
+            <div className="img-hover-zoom">
+              <img
+                className="card-img-top project-avatar"
+                style={{ opacity: loading ? 0.1 : 1 }}
+                src={src}
+                alt={src}
+                sizes="10"
+              />
+            </div>
           ) : (
             <Container className="text-center project-avatar-spinner">
               <PulseLoader
@@ -46,11 +61,11 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
         }
       </ProgressiveImage>
 
-      <Card.Body className="project-bg-image text-white">
+      <Card.Body className="project-bg-image text-white pb-1">
         <Card.Title className="fs-3">{projectData.title}</Card.Title>
         <Card.Text className="fs-4">{projectData.description}</Card.Text>
-        <Row className="border-top">
-          <Col className="border-end mt-2">
+        <Row className="border-top pt-1">
+          <Col className="mt-2">
             <Row className="row-cols-auto">
               <Col>
                 {projectData.skills.map((item, i) => {
@@ -68,7 +83,36 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
               </Col>
             </Row>
           </Col>
-          <Col></Col>
+          <Col className="text-end border-start">
+            {typeof projectData.live_page !== "undefined" ? (
+              <Button
+                variant="link"
+                className="pe-3"
+                onClick={(e) => onLinkClicked(e, projectData.live_page)}
+                target="_blank"
+                rel="noreferrer"
+                title="Open website with live project"
+              >
+                Live Page <i className="fa fa-external-link"></i>
+              </Button>
+            ) : (
+              ""
+            )}
+
+            {typeof projectData.git_page !== "undefined" ? (
+              <Button
+                variant="link"
+                className="ps-1"
+                onClick={(e) => onLinkClicked(e, projectData.git_page)}
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub <i className="fa fa-github" aria-hidden="true"></i>
+              </Button>
+            ) : (
+              ""
+            )}
+          </Col>
         </Row>
       </Card.Body>
     </Card>
