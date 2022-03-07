@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Card, Row, Col, Image, Container, Button } from "react-bootstrap";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { css } from "@emotion/react";
