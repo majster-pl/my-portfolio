@@ -70,7 +70,8 @@
     cursor: pointer;
 }
 
-.project-card:hover .img-hover-zoom img {
+.project-card:hover .img-hover-zoom img,
+.project-card:active .img-hover-zoom img {
     transform: scale(1.1);
 }
 
@@ -106,6 +107,13 @@
     syntax       : '<color>';
     initial-value: rgb(26, 26, 26);
     inherits     : false;
+}
+
+.project-card-visable img, .project-card-visable .project-bg-image {
+    --myColor1    : rgb(73, 0, 80) !important;
+    --myColor2    : rgb(10, 0, 100) !important;
+    -webkit-filter: grayscale(0) !important;
+    filter        : grayscale(0) !important;
 }
 
 

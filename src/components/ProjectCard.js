@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Row, Col, Image, Container, Button } from "react-bootstrap";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { css } from "@emotion/react";
 import PulseLoader from "react-spinners/PulseLoader";
+import VisibilitySensor from "react-visibility-sensor";
 
 const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
   const openModal = () => {
     openAppPreview();
     setAppPreviewData(projectData);
   };
+
+  const [visable, setVisable] = useState(false);
 
   const override = css`
     display: block;
@@ -27,95 +30,103 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
   };
 
   return (
-    <Card
-      className="mb-4 project-card shadow rounded-0"
-      onClick={(e) => onCardClicked(e)}
+    <VisibilitySensor
+      onChange={(isVisible) => {
+        setVisable(isVisible);
+      }}
     >
-      <ProgressiveImage
-        src={`/images/apps/${projectData.title
-          .toLowerCase()
-          .replaceAll(" ", "-")}/${projectData.avatar}`}
-        placeholder="demo.png"
+      <Card
+        className={`mb-4 project-card shadow rounded-0 ${
+          visable ? "project-card-visable" : ""
+        }`}
+        onClick={(e) => onCardClicked(e)}
       >
-        {(src, loading) =>
-          !loading ? (
-            <div className="img-hover-zoom">
-              <img
-                className="card-img-top project-avatar"
-                style={{ opacity: loading ? 0.1 : 1 }}
-                src={src}
-                alt={src}
-                sizes="10"
-              />
-            </div>
-          ) : (
-            <Container className="text-center project-avatar-spinner">
-              <PulseLoader
-                color="#9d16bf"
-                loading={true}
-                css={override}
-                size={20}
-              />
-            </Container>
-          )
-        }
-      </ProgressiveImage>
-
-      <Card.Body className="project-bg-image text-white pb-1">
-        <Card.Title className="fs-3">{projectData.title}</Card.Title>
-        <Card.Text className="fs-4">{projectData.description}</Card.Text>
-        <Row className="border-top pt-1">
-          <Col className="mt-2">
-            <Row className="row-cols-auto">
-              <Col>
-                {projectData.skills.map((item, i) => {
-                  return (
-                    <Image
-                      key={i}
-                      width="20rem"
-                      className="shadow me-2"
-                      src={`/images/logos/${item
-                        .toLocaleLowerCase()
-                        .replace(" ", "")}.png`}
-                    ></Image>
-                  );
-                })}
-              </Col>
-            </Row>
-          </Col>
-          <Col className="text-end border-start">
-            {typeof projectData.live_page !== "undefined" ? (
-              <Button
-                variant="link"
-                className="pe-3"
-                onClick={(e) => onLinkClicked(e, projectData.live_page)}
-                target="_blank"
-                rel="noreferrer"
-                title="Open website with live project"
-              >
-                Live Page <i className="fa fa-external-link"></i>
-              </Button>
+        <ProgressiveImage
+          src={`/images/apps/${projectData.title
+            .toLowerCase()
+            .replaceAll(" ", "-")}/${projectData.avatar}`}
+          placeholder="demo.png"
+        >
+          {(src, loading) =>
+            !loading ? (
+              <div className="img-hover-zoom">
+                <img
+                  className="card-img-top project-avatar"
+                  style={{ opacity: loading ? 0.1 : 1 }}
+                  src={src}
+                  alt={src}
+                  sizes="10"
+                />
+              </div>
             ) : (
-              ""
-            )}
+              <Container className="text-center project-avatar-spinner">
+                <PulseLoader
+                  color="#9d16bf"
+                  loading={true}
+                  css={override}
+                  size={20}
+                />
+              </Container>
+            )
+          }
+        </ProgressiveImage>
 
-            {typeof projectData.git_page !== "undefined" ? (
-              <Button
-                variant="link"
-                className="ps-1"
-                onClick={(e) => onLinkClicked(e, projectData.git_page)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub <i className="fa fa-github" aria-hidden="true"></i>
-              </Button>
-            ) : (
-              ""
-            )}
-          </Col>
-        </Row>
-      </Card.Body>
-    </Card>
+        <Card.Body className="project-bg-image text-white pb-1">
+          <Card.Title className="fs-3">{projectData.title}</Card.Title>
+          <Card.Text className="fs-4">{projectData.description}</Card.Text>
+          <Row className="border-top pt-1">
+            <Col className="mt-2">
+              <Row className="row-cols-auto">
+                <Col>
+                  {projectData.skills.map((item, i) => {
+                    return (
+                      <Image
+                        key={i}
+                        width="20rem"
+                        className="shadow me-2"
+                        src={`/images/logos/${item
+                          .toLocaleLowerCase()
+                          .replace(" ", "")}.png`}
+                      ></Image>
+                    );
+                  })}
+                </Col>
+              </Row>
+            </Col>
+            <Col className="border-start">
+              {typeof projectData.live_page !== "undefined" ? (
+                <Button
+                  variant="link"
+                  className="pe-3 text-info"
+                  onClick={(e) => onLinkClicked(e, projectData.live_page)}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Open website with live project"
+                >
+                  Live Page <i className="fa fa-external-link"></i>
+                </Button>
+              ) : (
+                ""
+              )}
+
+              {typeof projectData.git_page !== "undefined" ? (
+                <Button
+                  variant="link"
+                  className="ps-1"
+                  onClick={(e) => onLinkClicked(e, projectData.git_page)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub <i className="fa fa-github" aria-hidden="true"></i>
+                </Button>
+              ) : (
+                ""
+              )}
+            </Col>
+          </Row>
+        </Card.Body>
+      </Card>
+    </VisibilitySensor>
   );
 };
 
