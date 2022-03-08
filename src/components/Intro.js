@@ -36,7 +36,7 @@ const Intro = ({ id }) => {
                   typingSpeed={40}
                   pauseTime={2000}
                   sentences={[
-                    "Hi, my name is Szymon and I'm freelance full stack web developer based in Bristol",
+                    "Hi, my name is Szymon and I'm freelance web developer from Bristol",
                     "Check out some of my recent projects below...",
                     "Get in touch if you are planing to build something amazing and need help!",
                   ]}
