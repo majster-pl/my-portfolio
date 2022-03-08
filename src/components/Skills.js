@@ -1,5 +1,6 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
+import Skill from "./Skill";
 
 const Skills = ({ id }) => {
   const skillsList = [
@@ -29,17 +30,13 @@ const Skills = ({ id }) => {
           <Fade bottom>
             {skillsList.map((item, i) => {
               return (
-                <Col className="" key={i}>
-                  <Row className="m-2 p-2 skill-hover-zoom">
-                    <Image
-                      className="mb-2"
-                      src={`/images/logos/${item
-                        .toLocaleLowerCase()
-                        .replace(" ", "")}.png`}
-                    ></Image>
-                    <p className="fs-5 fw-normal">{item}</p>
-                  </Row>
-                </Col>
+                <Skill
+                  index={i}
+                  url={`/images/logos/${item
+                    .toLocaleLowerCase()
+                    .replace(" ", "")}.png`}
+                  title={item}
+                />
               );
             })}
           </Fade>

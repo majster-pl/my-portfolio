@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Typist from "react-text-typist";
 import Fade from "react-reveal/Fade";

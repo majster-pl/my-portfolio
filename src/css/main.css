@@ -29,7 +29,7 @@
 }
 
 .avatar-wobble {
-    height       : 12rem;
+    height       : 15rem;
     border-radius: 80% 20% 81% 19% / 23% 81% 19% 77%;
     transform    : rotate(-2deg);
     animation    : wobble-article 7s ease-in-out alternate infinite;
@@ -109,13 +109,18 @@
     inherits     : false;
 }
 
-.project-card-visable img, .project-card-visable .project-bg-image {
+.project-card-visable img,
+.project-card-visable .project-bg-image {
     --myColor1    : rgb(73, 0, 80) !important;
     --myColor2    : rgb(10, 0, 100) !important;
     -webkit-filter: grayscale(0) !important;
     filter        : grayscale(0) !important;
 }
 
+.project-card-visable .img-hover-zoom img {
+    transform: scale(1.04);
+
+}
 
 .project-card:hover .project-bg-image,
 .project-card:active .project-bg-image {
