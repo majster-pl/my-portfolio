@@ -38,7 +38,7 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
       onTouchEnd={() =>
         setTimeout(() => {
           setTouched(false);
-        }, 500)
+        }, 200)
       }
       onMouseEnter={() => setTouched(true)}
       onMouseLeave={() => setTouched(false)}
