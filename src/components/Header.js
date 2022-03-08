@@ -28,7 +28,13 @@ const Header = () => {
       >
         <Animate steps={steps} className="p-0">
           <Container>
-            <Navbar.Brand>
+            <Navbar.Brand
+              eventKey={1.0}
+              as={Link}
+              spy={true}
+              offset={-60}
+              to="intro"
+            >
               <img
                 alt=""
                 src="/images/logo.png"

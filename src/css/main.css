@@ -7,6 +7,10 @@
     cursor: pointer;
 }
 
+.navbar-brand:hover {
+    cursor: pointer;
+}
+
 /* INTRO */
 .intro-bg-image {
     background-image: url('../../public/images/bg/wave1.png'), linear-gradient(to right, rgb(26, 57, 232), rgb(194, 25, 152));
