@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 const AboutMe = ({ id }) => {
     return (
       <div id={id} className="w-100 m-0 p-0">
-        <Container className="py-5">
+        <Container className="py-5 unselectable">
           <Fade top cascade>
             <p className="fs-1 text-gray fw-bold">About Me</p>
           </Fade>

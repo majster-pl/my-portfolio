@@ -13,7 +13,10 @@ const Intro = ({ id }) => {
         setVisable(isVisible);
       }}
     >
-      <div id={id} className="intro-bg-image text-white w-100 m-0 p-0">
+      <div
+        id={id}
+        className="intro-bg-image text-white w-100 m-0 p-0 unselectable"
+      >
         <svg className="intro-bg-bottom-wave" viewBox="0 0 1440 319">
           <path
             fill="#fff"

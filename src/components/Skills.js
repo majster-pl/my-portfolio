@@ -21,7 +21,7 @@ const Skills = ({ id }) => {
 
   return (
     <div id={id} className="skills-bg-image text-white w-100 m-0 p-0">
-      <Container className="py-5">
+      <Container className="py-5 unselectable">
         <Fade top cascade>
           <p className="fs-1 fw-bold">My Skills</p>
         </Fade>

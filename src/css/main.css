@@ -49,7 +49,7 @@
 }
 
 .skill-hover-zoom img {
-    transition: transform .3s ease;
+    transition: transform .2s ease;
 }
 
 .skill-hover-zoom:hover img {
@@ -58,45 +58,6 @@
 
 
 /* PROJECTS */
-.img-hover-zoom {
-    overflow: hidden;
-}
-
-.img-hover-zoom img {
-    transition: transform .5s ease;
-}
-
-.project-card:hover {
-    cursor: pointer;
-}
-
-.project-card:hover .img-hover-zoom img,
-.project-card:active .img-hover-zoom img {
-    transform: scale(1.1);
-}
-
-.project-card .project-avatar,
-.project-card:active .project-avatar {
-    -webkit-filter    : grayscale(100%);
-    filter            : grayscale(100%);
-    -webkit-transition: 0.2s ease-in-out;
-    transition        : 0.2s ease-in-out;
-}
-
-.project-card:hover .project-avatar {
-    -webkit-filter: grayscale(0);
-    filter        : grayscale(0);
-}
-
-.project-avatar-spinner,
-.project-avatar {
-    min-height: 20rem;
-}
-
-
-
-
-/* MODAL */
 @property --myColor1 {
     syntax       : '<color>';
     initial-value: rgb(53, 53, 53);
@@ -109,23 +70,41 @@
     inherits     : false;
 }
 
-.project-card-visable img,
-.project-card-visable .project-bg-image {
+.img-hover-zoom {
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform .5s ease;
+}
+
+.project-card:hover {
+    cursor: pointer;
+}
+
+.project-card .project-avatar {
+    -webkit-filter    : grayscale(100%);
+    filter            : grayscale(100%);
+    -webkit-transition: 0.2s ease-in-out;
+    transition        : 0.2s ease-in-out;
+}
+
+.project-avatar-spinner,
+.project-avatar {
+    min-height: 20rem;
+}
+
+.project-card-focus img,
+.project-card-focus .project-bg-image {
     --myColor1    : rgb(73, 0, 80) !important;
     --myColor2    : rgb(10, 0, 100) !important;
     -webkit-filter: grayscale(0) !important;
     filter        : grayscale(0) !important;
 }
 
-.project-card-visable .img-hover-zoom img {
-    transform: scale(1.04);
+.project-card-focus .img-hover-zoom img {
+    transform: scale(1.1);
 
-}
-
-.project-card:hover .project-bg-image,
-.project-card:active .project-bg-image {
-    --myColor1: rgb(73, 0, 80);
-    --myColor2: rgb(10, 0, 100);
 }
 
 .project-bg-image {
@@ -135,6 +114,8 @@
     background-size: cover;
     color          : #0e0091;
 }
+
+/* MODAL */
 
 
 @media (min-width: 768px) {
@@ -169,8 +150,15 @@
     }
 }
 
-/* OTHERS */
 
+/* OTHERS */
 .text-justify {
     text-align: justify;
+}
+
+.unselectable {
+    -moz-user-select   : none;
+    -webkit-user-select: none;
+    -ms-user-select    : none;
+    user-select        : none;
 }

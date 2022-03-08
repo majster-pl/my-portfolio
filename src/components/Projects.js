@@ -5,7 +5,11 @@ import * as projects from "../projects.js";
 
 const Projects = ({ id, openAppPreview, setAppPreviewData }) => {
   return (
-    <div id={id} className="w-100 m-0 p-0" style={{ minHeight: "35rem" }}>
+    <div
+      id={id}
+      className="w-100 m-0 p-0 unselectable"
+      style={{ minHeight: "35rem" }}
+    >
       <Container className="py-5">
         <div className="fw-light">
           <Fade top cascade>

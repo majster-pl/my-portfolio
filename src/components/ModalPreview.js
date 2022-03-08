@@ -31,6 +31,7 @@ const ModalPreview = ({
 
   return (
     <Modal
+      className="unselectable"
       show={showAppPreview}
       onHide={closeAppPreview}
       centered

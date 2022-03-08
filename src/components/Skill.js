@@ -36,6 +36,8 @@ const Skill = ({ index, url, title }) => {
               src={url}
               onMouseEnter={trigerAnimation}
               onMouseLeave={stopAnimation}
+              onTouchStart={trigerAnimation}
+              onTouchEnd={stopAnimation}
             ></Image>
             <p className="fs-5 fw-normal">{title}</p>
           </Row>
