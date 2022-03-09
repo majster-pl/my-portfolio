@@ -111,6 +111,20 @@ const ModalPreview = ({
         ) : (
           ""
         )}
+
+        {typeof appPreviewData.store_page !== "undefined" ? (
+          <Button
+            variant="link"
+            className="ps-1"
+            href={appPreviewData.store_page}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Store <i className="fa fa-shopping-bag" aria-hidden="true"></i>
+          </Button>
+        ) : (
+          ""
+        )}
       </Modal.Footer>
     </Modal>
   );

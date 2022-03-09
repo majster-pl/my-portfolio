@@ -83,7 +83,7 @@ export const project3 = {
             </ul>
         </p>`,
   skills: ["html5", "css3", "javascript", "bootstrap", "jquery", "php"],
-  live_page: "https://queensroadgarage.co.uk/",
+  live_page: "https://opaltechnology.com/",
   images: [
     "1.png",
     "2.png",
@@ -100,5 +100,94 @@ export const project3 = {
     "13.png",
     "14.png",
     "15.png",
+  ],
+};
+
+
+export const project4 = {
+  title: "flas",
+  avatar: "demo.png",
+  description: "Online mobile radio application developed for Ubuntu Mobile OS",
+  body: `<p id="carouselItemDescription" className="fs-5 font-weight-normal text-dark">Flas is responsive QML application developed independently by me for Ubuntu Touch devices. Application is using rad.io API and LocalStorage from QtQuick stack to store local data on device. <br>Application features:
+            <ul>
+                <li>Play online radio in background</li>
+                <li>Add radio to favourites</li>
+                <li>Local radio stations</li>
+                <li>Recommended to you radio stations</li>
+                <li>Search radio by name</li>
+                <li>View recently played songs</li>
+                <li>Responsive layout (Mobile phone & Tablet mode)</li>
+                <li>Share song</li>
+                <li>3rd party API</li>
+            </ul>
+        </p>`,
+  skills: ["qt", "javascript", "MySQL"],
+  git_page: "https://github.com/majster-pl/flas/tree/master/flas",
+  images: [
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+    "7.png",
+    "8.png",
+    "9.png",
+  ],
+};
+
+
+export const project5 = {
+  title: "Ubuntu Touch Manager",
+  avatar: "demo.png",
+  description:
+    "Desktop application for Linux to let you take screenshots of your device from your computer, send and download files from/to device",
+  body: `<p id="carouselItemDescription" className="fs-5 font-weight-normal text-dark">Desktop application for Linux created using python and GTK. Application will let you connect to mobile device via adb and let you save current screenshots on you computer, send and download files from/to device. <br>Application features:
+            <ul>
+                <li>Simple to use</li>
+                <li>Capture screenshots from device</li>
+                <li>Share screenshots via <a rel="noreferrer" target='_blank' href='https://www.dropbox.com/'>Dropbox</a> and <a rel="noreferrer" target='_blank' href='https://login.ubuntu.com/'>UbuntuOne</a></li>
+                <li>Upload files to device</li>
+                <li>Download files from device</li>
+            </ul>
+        </p>`,
+  skills: ["qt", "javascript", "MySQL"],
+  git_page: "https://github.com/majster-pl/ubuntu-touch-manager",
+  images: ["1.png", "2.png", "3.png"],
+};
+
+
+export const project6 = {
+  title: "uTorch",
+  avatar: "demo.png",
+  description: "Simple and elegant torch application for Ubuntu Phone",
+  body: `<p id="carouselItemDescription" className="fs-5 font-weight-normal text-dark">Simple and elegant torch application for Ubuntu Phone.<br>Application features:
+            <ul>
+                <li>Simple to use</li>
+                <li>Absolutely free</li>
+                <li>Screen torch (swipe up from the bottom)</li>
+            </ul>
+            Supported devices:
+            <ul>
+                <li>BQ Aquaris e4.5</li>
+                <li>BQ Aquaris 5</li>
+                <li>Meizu MX4 </li>
+                <li>Meizu Pro5</li>
+                <li>Nexus 4</li>
+            </ul>
+        </p>`,
+  skills: ["qt", "javascript", "MySQL"],
+  git_page: "https://github.com/majster-pl/ubuntu-touch-manager",
+  store_page:
+    "https://open-store.io/app/com.ubuntu.developer.majster-pl.utorch",
+  images: [
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+    "7.png",
+    "8.png",
   ],
 };

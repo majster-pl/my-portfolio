@@ -28,10 +28,25 @@ const Projects = ({ id, openAppPreview, setAppPreviewData }) => {
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
+                <ProjectCard
+                  projectData={projects.project5}
+                  openAppPreview={openAppPreview}
+                  setAppPreviewData={setAppPreviewData}
+                />
               </Col>
               <Col className="col-12 col-md-6 mt-0 mt-md-5">
                 <ProjectCard
                   projectData={projects.project3}
+                  openAppPreview={openAppPreview}
+                  setAppPreviewData={setAppPreviewData}
+                />
+                <ProjectCard
+                  projectData={projects.project4}
+                  openAppPreview={openAppPreview}
+                  setAppPreviewData={setAppPreviewData}
+                />
+                <ProjectCard
+                  projectData={projects.project6}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />

@@ -124,6 +124,20 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
             ) : (
               ""
             )}
+
+            {typeof projectData.store_page !== "undefined" ? (
+              <Button
+                variant="link"
+                className="ps-1"
+                onClick={(e) => onLinkClicked(e, projectData.store_page)}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Store <i className="fa fa-shopping-bag" aria-hidden="true"></i>
+              </Button>
+            ) : (
+              ""
+            )}
           </Col>
         </Row>
       </Card.Body>
