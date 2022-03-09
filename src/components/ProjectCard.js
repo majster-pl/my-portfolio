@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, Row, Col, Image, Container, Button } from "react-bootstrap";
+import { Card, Row, Col, Image, Container, Button, Badge } from "react-bootstrap";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { css } from "@emotion/react";
 import PulseLoader from "react-spinners/PulseLoader";
@@ -51,7 +51,14 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
       >
         {(src, loading) =>
           !loading ? (
-            <div className="img-hover-zoom">
+            <div className="img-hover-zoom position-relative">
+              <Badge
+                className="position-absolute top-0 start-0 m-3 rounded-0"
+                style={{ zIndex: 200 }}
+                bg="purple"
+              >
+                {projectData.type}
+              </Badge>
               <img
                 className="card-img-top project-avatar"
                 style={{ opacity: loading ? 0.1 : 1 }}
