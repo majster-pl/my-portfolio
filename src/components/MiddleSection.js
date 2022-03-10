@@ -4,6 +4,7 @@ import AboutMe from "./AboutMe";
 import Intro from "./Intro";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 const MiddleSection = ({ openAppPreview, setAppPreviewData }) => {
 
@@ -14,13 +15,7 @@ const MiddleSection = ({ openAppPreview, setAppPreviewData }) => {
             <AboutMe id={"about"} />
             <Skills id={"skills"} />
             <Projects id={"projects"} openAppPreview={openAppPreview} setAppPreviewData={setAppPreviewData} />
-
-            <div id="contact" style={{ minHeight: "30rem" }}>
-                <Container>
-                    <h3>contact</h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
-                </Container>
-            </div>
+            <Contact id="contact"/>
         </>
     )
 }
