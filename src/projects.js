@@ -4,7 +4,7 @@ export const project1 = {
   type: "Web",
   description:
     "Web application for managing small and medium Workshops. Responsive design, live updates and build in notifications",
-  body: `<p className="fs-1 text-dark">Garage Manager is complete online solution created from scratch using Laravel as an back-end API server and React as front-end. This application let you organise/plan work in your garage while automaticly updating your customers about progress on reapir. <br><br>Key features:
+  body: `<p className="fs-1 text-dark">Garage Manager is complete online solution created from scratch using Laravel as an back-end <a rel="noreferrer" target='_blank' href='https://github.com/majster-pl/ws-floor-backend' title='GitHub page'>API</a> server and React as front-end. This application let you organise/plan work in your garage while automaticly updating your customers about progress on reapir. <br><br>Key features:
                     <ul>
                         <li>Add/Edit/Remove Customers</li>
                         <li>Add/Edit/Remove Vehicles</li>
@@ -16,7 +16,15 @@ export const project1 = {
                         <li>Record status of every step of reapair process</li>
                     </ul>
                 </p>`,
-  skills: ["react", "html5", "css3", "javascript", "bootstrap", "laravel", "github"],
+  skills: [
+    "react",
+    "html5",
+    "css3",
+    "javascript",
+    "bootstrap",
+    "laravel",
+    "github",
+  ],
   live_page: "https://ws-floor.waliczek.org",
   git_page: "https://github.com/majster-pl/ws-floor-webapp",
   images: [
@@ -44,7 +52,7 @@ export const project2 = {
   type: "Web",
   description:
     "Modern and elegant website for local garage based in Bristol with nice graphics and slick animations",
-  body: `<p className="fs-5 text-dark">Queens Road Garage is elegant page with well selected and slick animations.<br/>Main features:
+  body: `<p className="fs-5 text-dark">Queens Road Garage is elegant website for local garage based in Bristol with well nice design and slick animations.<br/>Main features:
                     <ul>
                         <li>Responsive layout</li>
                         <li>Available in two languages (EN & PL)</li>
@@ -73,7 +81,7 @@ export const project3 = {
   type: "Web",
   description:
     "Responsive website for the UK’s leading suppliers of Mobile Computing and Point of Sale hardware",
-  body: `<p className="fs-5 text-dark">Queens Road Garage is elegant page with well selected and slick animations.<br/>Main features:
+  body: `<p className="fs-5 text-dark">OpalTec is one of the UK’s leading suppliers of Mobile Computing and Point of Sale hardware. <br>Website features:
             <ul>
                 <li>Responsive layout</li>
                 <li>Admin Panel to manage website</li>
@@ -85,7 +93,15 @@ export const project3 = {
                 <li>Fraud and abuse free by reCAPTCHA</li>
             </ul>
         </p>`,
-  skills: ["html5", "css3", "javascript", "bootstrap", "jquery", "php", "mysql"],
+  skills: [
+    "html5",
+    "css3",
+    "javascript",
+    "bootstrap",
+    "jquery",
+    "php",
+    "mysql",
+  ],
   live_page: "https://opaltechnology.com/",
   images: [
     "1.png",
@@ -112,7 +128,7 @@ export const project4 = {
   avatar: "demo.png",
   type: "Mobile",
   description: "Online mobile radio application developed for Ubuntu Mobile OS",
-  body: `<p className="fs-5 text-dark">Flas is responsive QML application developed independently by me for Ubuntu Touch devices. Application is using rad.io API and LocalStorage from QtQuick stack to store local data on device. <br>Application features:
+  body: `<p className="fs-5 text-dark">Flas is responsive QML application developed for Ubuntu Touch devices. Application is using rad.io API and LocalStorage from QtQuick stack to store local data on device. <br>Application features:
             <ul>
                 <li>Play online radio in background</li>
                 <li>Add radio to favourites</li>
@@ -205,7 +221,7 @@ export const project7 = {
   type: "Web",
   description:
     "Web Application to log internet connection download/upload speed and present collected data in web browser",
-  body: `<p className="fs-5 text-dark">Simple application initially created for my own use to monitor my internet connection but decided to make it public as it might be useful for others. This is combination of Python and node.js server, python script will run a speedtest and store data into JSON file which than is read by local express server and nicely presented in the web browser.<br>Features:
+  body: `<p className="fs-5 text-dark">Simple application initially created for my own use to monitor my internet connection but decided to make it public as it might be useful for others. This is combination of Python and node.js server, python script will run a speedtest and store data into JSON file which then is read by local express server and nicely presented in the web browser.<br>Features:
             <ul>
                 <li>Simple cmd setup process (python)</li>
                 <li>Can be added to crontab during setup</li>
