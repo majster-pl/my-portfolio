@@ -44,7 +44,7 @@ export const project2 = {
   type: "Web",
   description:
     "Modern and elegant website for local garage based in Bristol with nice graphics and slick animations",
-  body: `<p className="fs-5 font-weight-normal text-dark">Queens Road Garage is elegant page with well selected and slick animations.<br/>Main features:
+  body: `<p className="fs-5 text-dark">Queens Road Garage is elegant page with well selected and slick animations.<br/>Main features:
                     <ul>
                         <li>Responsive layout</li>
                         <li>Available in two languages (EN & PL)</li>
@@ -73,7 +73,7 @@ export const project3 = {
   type: "Web",
   description:
     "Responsive website for the UK’s leading suppliers of Mobile Computing and Point of Sale hardware",
-  body: `<p className="fs-5 font-weight-normal text-dark">Queens Road Garage is elegant page with well selected and slick animations.<br/>Main features:
+  body: `<p className="fs-5 text-dark">Queens Road Garage is elegant page with well selected and slick animations.<br/>Main features:
             <ul>
                 <li>Responsive layout</li>
                 <li>Admin Panel to manage website</li>
@@ -85,7 +85,7 @@ export const project3 = {
                 <li>Fraud and abuse free by reCAPTCHA</li>
             </ul>
         </p>`,
-  skills: ["html5", "css3", "javascript", "bootstrap", "jquery", "php"],
+  skills: ["html5", "css3", "javascript", "bootstrap", "jquery", "php", "mysql"],
   live_page: "https://opaltechnology.com/",
   images: [
     "1.png",
@@ -112,7 +112,7 @@ export const project4 = {
   avatar: "demo.png",
   type: "Mobile",
   description: "Online mobile radio application developed for Ubuntu Mobile OS",
-  body: `<p className="fs-5 font-weight-normal text-dark">Flas is responsive QML application developed independently by me for Ubuntu Touch devices. Application is using rad.io API and LocalStorage from QtQuick stack to store local data on device. <br>Application features:
+  body: `<p className="fs-5 text-dark">Flas is responsive QML application developed independently by me for Ubuntu Touch devices. Application is using rad.io API and LocalStorage from QtQuick stack to store local data on device. <br>Application features:
             <ul>
                 <li>Play online radio in background</li>
                 <li>Add radio to favourites</li>
@@ -147,7 +147,7 @@ export const project5 = {
   type: "Desktop",
   description:
     "Desktop application for Linux to let you take screenshots of your device from your computer, send and download files from/to device",
-  body: `<p className="fs-5 font-weight-normal text-dark">Desktop application for Linux created using python and GTK. Application will let you connect to mobile device via adb and let you save current screenshots on you computer, send and download files from/to device. <br>Application features:
+  body: `<p className="fs-5 text-dark">Desktop application for Linux created using python and GTK. Application will let you connect to mobile device via adb and let you save current screenshots on you computer, send and download files from/to device. <br>Application features:
             <ul>
                 <li>Simple to use</li>
                 <li>Capture screenshots from device</li>
@@ -156,7 +156,7 @@ export const project5 = {
                 <li>Download files from device</li>
             </ul>
         </p>`,
-  skills: ["qt", "javascript", "MySQL"],
+  skills: ["gtk", "python", "bash"],
   git_page: "https://github.com/majster-pl/ubuntu-touch-manager",
   images: ["1.png", "2.png", "3.png"],
 };
@@ -167,7 +167,7 @@ export const project6 = {
   avatar: "demo.png",
   type: "Mobile",
   description: "Simple and elegant torch application for Ubuntu Phone",
-  body: `<p className="fs-5 font-weight-normal text-dark">Simple and elegant torch application for Ubuntu Phone.<br>Application features:
+  body: `<p className="fs-5 text-dark">Simple and elegant torch application for Ubuntu Phone.<br>Application features:
             <ul>
                 <li>Simple to use</li>
                 <li>Absolutely free</li>
@@ -203,26 +203,30 @@ export const project7 = {
   title: "Open Link Logger",
   avatar: "demo.png",
   type: "Web",
-  description: "Web Aplication to log internet connection speed",
-  body: `<p className="fs-5 font-weight-normal text-dark">Simple and elegant torch application for Ubuntu Phone.<br>Application features:
+  description:
+    "Web Application to log internet connection download/upload speed and present collected data in web browser",
+  body: `<p className="fs-5 text-dark">Simple application initially created for my own use to monitor my internet connection but decided to make it public as it might be useful for others. This is combination of Python and node.js server, python script will run a speedtest and store data into JSON file which than is read by local express server and nicely presented in the web browser.<br>Features:
             <ul>
-                <li>Simple to use</li>
-                <li>Absolutely free</li>
-                <li>Screen torch (swipe up from the bottom)</li>
-            </ul>
-            Supported devices:
-            <ul>
-                <li>BQ Aquaris e4.5</li>
-                <li>BQ Aquaris 5</li>
-                <li>Meizu MX4 </li>
-                <li>Meizu Pro5</li>
-                <li>Nexus 4</li>
+                <li>Simple cmd setup process (python)</li>
+                <li>Can be added to crontab during setup</li>
+                <li>Responsive layout</li>
+                <li>Avrage speed and ping</li>
+                <li>Graphical view of data</li>
+                <li>Table view</li>
+                <li>Free and Open Source</li>
             </ul>
         </p>`,
-  skills: ["qt", "javascript", "MySQL"],
-  git_page: "https://github.com/majster-pl/ubuntu-touch-manager",
-  store_page:
-    "https://open-store.io/app/com.ubuntu.developer.majster-pl.utorch",
+  skills: [
+    "react",
+    "html5",
+    "css3",
+    "javascript",
+    "bootstrap",
+    "python",
+    "bash",
+    "nodejs",
+  ],
+  git_page: "https://github.com/majster-pl/open-link-logger",
   images: [
     "1.png",
     "2.png",

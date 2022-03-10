@@ -93,6 +93,7 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
                       key={i}
                       width="20rem"
                       className="shadow me-2"
+                      title={item}
                       src={`/images/logos/${item
                         .toLocaleLowerCase()
                         .replace(" ", "")}.png`}
