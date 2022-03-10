@@ -1,4 +1,4 @@
-export const project1 = {
+export const wsFloor = {
   title: "WS-Floor",
   avatar: "demo.jpg",
   type: "Web",
@@ -46,7 +46,7 @@ export const project1 = {
   ],
 };
 
-export const project2 = {
+export const queensRoadGarage = {
   title: "Queens Road Garage",
   avatar: "demo.png",
   type: "Web",
@@ -75,7 +75,7 @@ export const project2 = {
   ],
 };
 
-export const project3 = {
+export const opaltec = {
   title: "OpalTec",
   avatar: "demo.png",
   type: "Web",
@@ -123,7 +123,7 @@ export const project3 = {
 };
 
 
-export const project4 = {
+export const flas = {
   title: "flas",
   avatar: "demo.png",
   type: "Mobile",
@@ -157,7 +157,7 @@ export const project4 = {
 };
 
 
-export const project5 = {
+export const ubuntuTouchManager = {
   title: "Ubuntu Touch Manager",
   avatar: "demo.png",
   type: "Desktop",
@@ -178,7 +178,7 @@ export const project5 = {
 };
 
 
-export const project6 = {
+export const uTorch = {
   title: "uTorch",
   avatar: "demo.png",
   type: "Mobile",
@@ -215,7 +215,7 @@ export const project6 = {
 };
 
 
-export const project7 = {
+export const openLinkLogger = {
   title: "Open Link Logger",
   avatar: "demo.png",
   type: "Web",

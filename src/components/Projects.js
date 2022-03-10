@@ -19,39 +19,39 @@ const Projects = ({ id, openAppPreview, setAppPreviewData }) => {
             <Row className="text-center">
               <Col className="col-12 col-md-6  ">
                 <ProjectCard
-                  projectData={projects.project1}
+                  projectData={projects.wsFloor}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
                 <ProjectCard
-                  projectData={projects.project2}
+                  projectData={projects.queensRoadGarage}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
                 <ProjectCard
-                  projectData={projects.project5}
+                  projectData={projects.ubuntuTouchManager}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
                 <ProjectCard
-                  projectData={projects.project6}
+                  projectData={projects.uTorch}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
               </Col>
               <Col className="col-12 col-md-6 mt-0 mt-md-5">
                 <ProjectCard
-                  projectData={projects.project3}
+                  projectData={projects.openLinkLogger}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
                 <ProjectCard
-                  projectData={projects.project7}
+                  projectData={projects.opaltec}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
                 <ProjectCard
-                  projectData={projects.project4}
+                  projectData={projects.flas}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
