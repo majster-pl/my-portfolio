@@ -60,7 +60,7 @@ const Header = () => {
                   eventKey={1.2}
                   as={Link}
                   spy={true}
-                  offset={-60}
+                  offset={-90}
                   to="about"
                 >
                   About me
