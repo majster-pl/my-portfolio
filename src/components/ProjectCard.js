@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { Card, Row, Col, Image, Container, Button, Badge } from "react-bootstrap";
+import {
+  Card,
+  Row,
+  Col,
+  Image,
+  Container,
+  Button,
+  Badge,
+} from "react-bootstrap";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { css } from "@emotion/react";
 import PulseLoader from "react-spinners/PulseLoader";
@@ -85,14 +93,14 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
         <Card.Text className="fs-4">{projectData.description}</Card.Text>
         <Row className="border-top pt-1">
           <Col className="mt-2">
-            <Row className="row-cols-auto">
+            <Row className="row-cols">
               <Col>
                 {projectData.skills.map((item, i) => {
                   return (
                     <Image
                       key={i}
                       width="20rem"
-                      className="shadow me-2"
+                      className="shadow me-2 mb-2"
                       title={item}
                       src={`/images/logos/${item
                         .toLocaleLowerCase()

@@ -17,7 +17,7 @@ const Projects = ({ id, openAppPreview, setAppPreviewData }) => {
           </Fade>
           <Fade bottom>
             <Row className="text-center">
-              <Col className="col-12 col-md-6  ">
+              <Col className="col-12 col-lg-6">
                 <ProjectCard
                   projectData={projects.wsFloor}
                   openAppPreview={openAppPreview}
@@ -29,17 +29,12 @@ const Projects = ({ id, openAppPreview, setAppPreviewData }) => {
                   setAppPreviewData={setAppPreviewData}
                 />
                 <ProjectCard
-                  projectData={projects.ubuntuTouchManager}
-                  openAppPreview={openAppPreview}
-                  setAppPreviewData={setAppPreviewData}
-                />
-                <ProjectCard
                   projectData={projects.uTorch}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
               </Col>
-              <Col className="col-12 col-md-6 mt-0 mt-md-5">
+              <Col className="col-12 col-lg-6 mt-0 mt-lg-5">
                 <ProjectCard
                   projectData={projects.openLinkLogger}
                   openAppPreview={openAppPreview}
@@ -51,7 +46,7 @@ const Projects = ({ id, openAppPreview, setAppPreviewData }) => {
                   setAppPreviewData={setAppPreviewData}
                 />
                 <ProjectCard
-                  projectData={projects.flas}
+                  projectData={projects.ubuntuTouchManager}
                   openAppPreview={openAppPreview}
                   setAppPreviewData={setAppPreviewData}
                 />
