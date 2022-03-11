@@ -20,8 +20,8 @@
 }
 
 .intro-bg-bottom-wave {
-    position: absolute;
-    bottom  : -0.1rem;
+    position                 : absolute;
+    bottom                   : -0.1rem;
 }
 
 .intro-content {
@@ -33,7 +33,7 @@
 }
 
 .avatar-wobble {
-    height       : 15rem;
+    height       : 16rem;
     border-radius: 80% 20% 81% 19% / 23% 81% 19% 77%;
     transform    : rotate(-2deg);
     animation    : wobble-article 7s ease-in-out alternate infinite;
