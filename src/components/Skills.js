@@ -16,7 +16,6 @@ const Skills = ({ id }) => {
     "MySQL",
     "GitHub",
     "Qt",
-    "GTK",
   ];
 
   return (
@@ -26,7 +25,7 @@ const Skills = ({ id }) => {
           <p className="fs-1 fw-bold">My Skills</p>
         </Fade>
 
-        <Row className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 text-center">
+        <Row className="row row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 text-center">
           <Fade bottom>
             {skillsList.map((item, i) => {
               return (
