@@ -15,44 +15,42 @@ const Projects = ({ id, openAppPreview, setAppPreviewData }) => {
           <Fade top cascade>
             <p className="fs-1 text-gray fw-bold">Recent Projects</p>
           </Fade>
-          <Fade bottom>
-            <Row className="text-center">
-              <Col className="col-12 col-lg-6">
-                <ProjectCard
-                  projectData={projects.wsFloor}
-                  openAppPreview={openAppPreview}
-                  setAppPreviewData={setAppPreviewData}
-                />
-                <ProjectCard
-                  projectData={projects.queensRoadGarage}
-                  openAppPreview={openAppPreview}
-                  setAppPreviewData={setAppPreviewData}
-                />
-                <ProjectCard
-                  projectData={projects.uTorch}
-                  openAppPreview={openAppPreview}
-                  setAppPreviewData={setAppPreviewData}
-                />
-              </Col>
-              <Col className="col-12 col-lg-6 mt-0 mt-lg-5">
-                <ProjectCard
-                  projectData={projects.openLinkLogger}
-                  openAppPreview={openAppPreview}
-                  setAppPreviewData={setAppPreviewData}
-                />
-                <ProjectCard
-                  projectData={projects.opaltec}
-                  openAppPreview={openAppPreview}
-                  setAppPreviewData={setAppPreviewData}
-                />
-                <ProjectCard
-                  projectData={projects.ubuntuTouchManager}
-                  openAppPreview={openAppPreview}
-                  setAppPreviewData={setAppPreviewData}
-                />
-              </Col>
-            </Row>
-          </Fade>
+          <Row className="text-center">
+            <Col className="col-12 col-lg-6">
+              <ProjectCard
+                projectData={projects.wsFloor}
+                openAppPreview={openAppPreview}
+                setAppPreviewData={setAppPreviewData}
+              />
+              <ProjectCard
+                projectData={projects.queensRoadGarage}
+                openAppPreview={openAppPreview}
+                setAppPreviewData={setAppPreviewData}
+              />
+              <ProjectCard
+                projectData={projects.uTorch}
+                openAppPreview={openAppPreview}
+                setAppPreviewData={setAppPreviewData}
+              />
+            </Col>
+            <Col className="col-12 col-lg-6 mt-0 mt-lg-5">
+              <ProjectCard
+                projectData={projects.openLinkLogger}
+                openAppPreview={openAppPreview}
+                setAppPreviewData={setAppPreviewData}
+              />
+              <ProjectCard
+                projectData={projects.opaltec}
+                openAppPreview={openAppPreview}
+                setAppPreviewData={setAppPreviewData}
+              />
+              <ProjectCard
+                projectData={projects.ubuntuTouchManager}
+                openAppPreview={openAppPreview}
+                setAppPreviewData={setAppPreviewData}
+              />
+            </Col>
+          </Row>
         </div>
       </Container>
     </div>
