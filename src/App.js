@@ -4,6 +4,7 @@ import './css/main.scss'
 import './css/main.css'
 import { useState } from "react";
 import ModalPreview from "./components/ModalPreview";
+import Footer from "./components/Footer";
 
 function App() {
   const [showAppPreview, setShowAppPreview] = useState(false);
@@ -34,6 +35,7 @@ function App() {
         appPreviewData={appPreviewData}
         closeAppPreview={closeAppPreview}
       />
+      <Footer/>
     </>
   );
 }
