@@ -30,6 +30,11 @@ $input-border-radius: 0;
 $input-border-radius-sm: 0;
 $input-border-radius-lg: 0;
 
+// Button
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
 // Import Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap/scss/variables";

@@ -1,4 +1,11 @@
-import { Container, Form, FloatingLabel } from "react-bootstrap";
+import {
+  Container,
+  Form,
+  Button,
+  FloatingLabel,
+  Col,
+  Row,
+} from "react-bootstrap";
 import { Fade } from "react-reveal";
 
 const Projects = ({ id }) => {
@@ -18,6 +25,7 @@ const Projects = ({ id }) => {
           className="mb-3"
         >
           <Form.Control type="text" placeholder="Enter you name" />
+          <Form.Text className="text-danger"></Form.Text>
         </FloatingLabel>
 
         <FloatingLabel
@@ -25,7 +33,8 @@ const Projects = ({ id }) => {
           label="e-mail"
           className="mb-3"
         >
-          <Form.Control type="email" placeholder="name@example.com"/>
+          <Form.Control type="email" placeholder="name@example.com" />
+          <Form.Text className="text-danger"></Form.Text>
         </FloatingLabel>
         <FloatingLabel controlId="floatingMessage" label="Message">
           <Form.Control
@@ -33,7 +42,15 @@ const Projects = ({ id }) => {
             placeholder="Enter your message"
             style={{ height: "100px" }}
           />
+          <Form.Text className="text-danger"></Form.Text>
         </FloatingLabel>
+        <Row className="justify-content-end">
+          <Col className="col-12 col-md-3 justify-content-end">
+            <Button className="float-end mt-3 w-100" variant="purple">
+              Send
+            </Button>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
