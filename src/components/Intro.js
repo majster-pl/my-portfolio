@@ -32,7 +32,7 @@ const Intro = ({ id }) => {
                 typingSpeed={50}
                 pauseTime={2500}
                 sentences={[
-                  "Hi, I'm Szymon web developer and open source enthusiast from Bristol, UK",
+                  "Hi! I'm Szymon, web developer and open source enthusiast from Bristol, UK",
                   "Get in touch if you need help with creating something amazing!",
                 ]}
               />

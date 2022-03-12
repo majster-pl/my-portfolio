@@ -1,10 +1,5 @@
 body {
     min-width: 20rem;
-    /* Suppose you want minimum width of 1000px */
-    width    : auto !important;
-    /* Firefox will set width as auto */
-    width    : 1000px;
-    /* As IE6 ignores !important it will set width as 1000px; */
 }
 
 .navbar {
@@ -29,8 +24,9 @@ body {
 }
 
 .intro-bg-bottom-wave {
-    position                 : absolute;
-    bottom                   : -0.1rem;
+    position   : absolute;
+    /* bottom  : 14rem; */
+    bottom     : -0.2rem;
 }
 
 .intro-content {
@@ -130,7 +126,6 @@ body {
 
 /* MODAL */
 
-
 @media (min-width: 768px) {
     .header-content {
         padding-top: 9rem;
@@ -148,6 +143,16 @@ body {
         width        : 90%;
         /* max-height: 90vh; */
         max-width    : 100vh !important;
+    }
+
+}
+
+@media (min-width: 1625px) {
+ 
+    .intro-bg-bottom-wave {
+        position   : absolute;
+        /* bottom  : 14rem; */
+        bottom     : -8rem;
     }
 
 }

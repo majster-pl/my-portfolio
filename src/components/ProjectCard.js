@@ -91,9 +91,9 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
       <Card.Body className="project-bg-image text-white pb-1">
         <Card.Title className="fs-3">{projectData.title}</Card.Title>
         <Card.Text className="fs-4">{projectData.description}</Card.Text>
-        <Row className="border-top pt-1">
+        <Row className="border-top align-items-center pt-1">
           <Col className="mt-2">
-            <Row className="row-cols">
+            <Row className="row-cols ">
               <Col>
                 {projectData.skills.map((item, i) => {
                   return (
@@ -115,7 +115,7 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
             {typeof projectData.live_page !== "undefined" ? (
               <Button
                 variant="link"
-                className="pe-3 text-info"
+                className="p-0 m-0 px-3"
                 onClick={(e) => onLinkClicked(e, projectData.live_page)}
                 target="_blank"
                 rel="noreferrer"
@@ -130,7 +130,7 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
             {typeof projectData.git_page !== "undefined" ? (
               <Button
                 variant="link"
-                className="ps-1"
+                className="p-0 m-0 px-3"
                 onClick={(e) => onLinkClicked(e, projectData.git_page)}
                 target="_blank"
                 rel="noreferrer"
@@ -144,7 +144,7 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
             {typeof projectData.store_page !== "undefined" ? (
               <Button
                 variant="link"
-                className="ps-1"
+                className="p-0 m-0 px-3"
                 onClick={(e) => onLinkClicked(e, projectData.store_page)}
                 target="_blank"
                 rel="noreferrer"
