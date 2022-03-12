@@ -1,5 +1,4 @@
-import { Link } from "react-scroll";
-import { Row, Nav, Stack, Container } from "react-bootstrap";
+import { Nav, Stack, Container } from "react-bootstrap";
 
 function Footer() {
   return (

@@ -1,5 +1,3 @@
-import { Container } from "react-bootstrap"
-
 import AboutMe from "./AboutMe";
 import Intro from "./Intro";
 import Skills from "./Skills";
