@@ -17,13 +17,21 @@ $theme-colors: (
     "dark-green": #137265,
 );
 
+// Link
 $link-color: rgb(194, 41, 255);
 $link-decoration: none;
 
+// Input
+$input-border-width: 0.15rem;
+$input-bg: rgba(136, 136, 136, 0.042);
+$input-focus-border-color: $link-color;
+$input-focus-box-shadow: 2 2 $link-color;
+$input-border-radius: 0;
+$input-border-radius-sm: 0;
+$input-border-radius-lg: 0;
 
 // Import Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap.scss";
-// @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
 // Awesome Fonts
