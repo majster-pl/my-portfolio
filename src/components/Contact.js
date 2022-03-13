@@ -94,7 +94,7 @@ const Projects = ({ id }) => {
                 <FloatingLabel
                   controlId="floatingName"
                   label="Your Name"
-                  className="mb-3"
+                  className="mb-4"
                 >
                   <Form.Control
                     type="text"
@@ -112,8 +112,8 @@ const Projects = ({ id }) => {
 
                 <FloatingLabel
                   controlId="floatingEmail"
-                  label="e-mail"
-                  className="mb-3"
+                  label="E-mail"
+                  className="mb-4"
                 >
                   <Form.Control
                     type="email"
@@ -132,7 +132,7 @@ const Projects = ({ id }) => {
                   <Form.Control
                     as="textarea"
                     placeholder="Enter your message"
-                    style={{ height: "100px" }}
+                    style={{ height: "15rem" }}
                     onChange={props.handleChange("message")}
                     value={props.values.message}
                   />
