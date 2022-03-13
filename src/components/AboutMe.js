@@ -13,7 +13,7 @@ const AboutMe = ({ id }) => {
         <div className="fs-3 fw-light">
           <Fade bottom>
             <p className="text-justify">
-              My name is Szymon, I'm self taught freelance web developer based
+              My name is Szymon, I'm a self taught freelance web developer based
               in Bristol, UK. My coding journey started of as a hobby back in
               2011 by developing Linux desktop applications using GTK and
               Python. One of my desktop applications was{" "}
