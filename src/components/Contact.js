@@ -81,98 +81,100 @@ const Projects = ({ id }) => {
         <Fade top cascade>
           <p className="fs-1 text-gray fw-bold">Contact Me</p>
         </Fade>
-        <Fade bottom cascade>
-          <Formik
-            initialValues={formGeneral}
-            validateOnChange={true}
-            validationSchema={reviewSchema}
-            enableReinitialize={true}
-            onSubmit={handleSubmit}
-          >
-            {(props) => (
-              <>
-                <FloatingLabel
-                  controlId="floatingName"
-                  label="Your Name"
-                  className="mb-4"
-                >
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter you name"
-                    onChange={props.handleChange("name")}
-                    value={props.values.name}
-                  />
-                  <Form.Control.Feedback
-                    type="invalid"
-                    className="d-block text-pink"
+        <Formik
+          initialValues={formGeneral}
+          validateOnChange={true}
+          validationSchema={reviewSchema}
+          enableReinitialize={true}
+          onSubmit={handleSubmit}
+        >
+          {(props) => (
+            <>
+              <Fade bottom>
+                <div>
+                  <FloatingLabel
+                    controlId="floatingName"
+                    label="Your Name"
+                    className="mb-4"
                   >
-                    {props.touched.name && props.errors.name}
-                  </Form.Control.Feedback>
-                </FloatingLabel>
-
-                <FloatingLabel
-                  controlId="floatingEmail"
-                  label="E-mail"
-                  className="mb-4"
-                >
-                  <Form.Control
-                    type="email"
-                    placeholder="name@example.com"
-                    onChange={props.handleChange("email")}
-                    value={props.values.email}
-                  />
-                  <Form.Control.Feedback
-                    type="invalid"
-                    className="d-block text-pink"
-                  >
-                    {props.touched.email && props.errors.email}
-                  </Form.Control.Feedback>
-                </FloatingLabel>
-                <FloatingLabel controlId="floatingMessage" label="Message">
-                  <Form.Control
-                    as="textarea"
-                    placeholder="Enter your message"
-                    style={{ height: "15rem" }}
-                    onChange={props.handleChange("message")}
-                    value={props.values.message}
-                  />
-                  <Form.Control.Feedback
-                    type="invalid"
-                    className="d-block text-pink"
-                  >
-                    {props.touched.message && props.errors.message}
-                  </Form.Control.Feedback>
-                </FloatingLabel>
-
-                <Row className="justify-content-end">
-                  <Col className="col-12 col-md-3 justify-content-end">
-                    <Button
-                      className="float-end mt-3 w-100"
-                      variant="purple"
-                      onClick={() => props.submitForm()}
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter you name"
+                      onChange={props.handleChange("name")}
+                      value={props.values.name}
+                    />
+                    <Form.Control.Feedback
+                      type="invalid"
+                      className="d-block text-pink"
                     >
-                      {props.isSubmitting ? (
-                        <>
-                          <Spinner
-                            className="mx-2"
-                            as="span"
-                            animation="grow"
-                            size="sm"
-                            role="status"
-                            aria-hidden="true"
-                          />
-                          Sending...
-                        </>
-                      ) : (
-                        "Send"
-                      )}
-                    </Button>
-                  </Col>
-                </Row>
-              </>
-            )}
-          </Formik>
-        </Fade>
+                      {props.touched.name && props.errors.name}
+                    </Form.Control.Feedback>
+                  </FloatingLabel>
+
+                  <FloatingLabel
+                    controlId="floatingEmail"
+                    label="E-mail"
+                    className="mb-4"
+                  >
+                    <Form.Control
+                      type="email"
+                      placeholder="name@example.com"
+                      onChange={props.handleChange("email")}
+                      value={props.values.email}
+                    />
+                    <Form.Control.Feedback
+                      type="invalid"
+                      className="d-block text-pink"
+                    >
+                      {props.touched.email && props.errors.email}
+                    </Form.Control.Feedback>
+                  </FloatingLabel>
+                  <FloatingLabel controlId="floatingMessage" label="Message">
+                    <Form.Control
+                      as="textarea"
+                      placeholder="Enter your message"
+                      style={{ height: "15rem" }}
+                      onChange={props.handleChange("message")}
+                      value={props.values.message}
+                    />
+                    <Form.Control.Feedback
+                      type="invalid"
+                      className="d-block text-pink"
+                    >
+                      {props.touched.message && props.errors.message}
+                    </Form.Control.Feedback>
+                  </FloatingLabel>
+
+                  <Row className="justify-content-end">
+                    <Col className="col-12 col-md-3 justify-content-end">
+                      <Button
+                        className="float-end mt-3 w-100"
+                        variant="purple"
+                        onClick={() => props.submitForm()}
+                      >
+                        {props.isSubmitting ? (
+                          <>
+                            <Spinner
+                              className="mx-2"
+                              as="span"
+                              animation="grow"
+                              size="sm"
+                              role="status"
+                              aria-hidden="true"
+                            />
+                            Sending...
+                          </>
+                        ) : (
+                          "Send"
+                        )}
+                      </Button>
+                    </Col>
+                  </Row>
+                </div>
+              </Fade>
+            </>
+          )}
+        </Formik>
       </Container>
       <ToastContainer
         theme="colored"
