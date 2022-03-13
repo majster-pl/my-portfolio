@@ -30,10 +30,10 @@ const Intro = ({ id }) => {
                 startDelay={1000}
                 deletingSpeed={10}
                 typingSpeed={50}
-                pauseTime={2500}
+                pauseTime={3500}
                 sentences={[
-                  "Hi! I'm Szymon, web developer and open source enthusiast from Bristol, UK",
-                  "Get in touch if you need help with creating something amazing!",
+                  "Hi! I'm Szymon, web developer and open source fan from Bristol, UK",
+                  "Get in touch if you need support with your website or you are looking to create a new one!",
                 ]}
               />
             </p>
