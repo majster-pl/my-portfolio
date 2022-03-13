@@ -30,7 +30,7 @@ const Skills = ({ id }) => {
             {skillsList.map((item, i) => {
               return (
                 <Skill
-                  index={i}
+                  key={i}
                   url={`/images/logos/${item
                     .toLocaleLowerCase()
                     .replace(" ", "")}.png`}
