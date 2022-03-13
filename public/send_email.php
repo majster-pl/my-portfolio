@@ -20,7 +20,9 @@ function died($error)
 $email_to = "waliczek.szymon@gmail.com";
 $email_subject = clean_string("Websie enquiry");
 $email_message = clean_string($data['message']);
-$email_message = trim(preg_replace('/\s+/', '<br/>', $email_message));
+$email_message = trim(preg_replace('/(\r\n)|\n|\r/', '<br/>', $email_message));
+// $email_message = trim(preg_replace('/(\r\n)|\n|\r/', '\\n', $email_message));
+// $email_message = trim(preg_replace('/\s+/', '<br/>', $email_message));
 $email_from = clean_string($data['email']);
 $name = clean_string($data['name']);
 
