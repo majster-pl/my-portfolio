@@ -5,7 +5,7 @@ function Footer() {
     <footer className="bg-secondary text-muted py-4">
       <Container>
         <Stack direction="horizontal" gap={3}>
-          <span className="align-middle">
+          <span className="align-middle text-white">
             © 2022 Szymon Waliczek. All rights reserved.
           </span>
 
