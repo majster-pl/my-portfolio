@@ -105,7 +105,7 @@ const Projects = ({ id }) => {
                     />
                     <Form.Control.Feedback
                       type="invalid"
-                      className="d-block text-pink"
+                      className="d-block text-danger"
                     >
                       {props.touched.name && props.errors.name}
                     </Form.Control.Feedback>
@@ -124,7 +124,7 @@ const Projects = ({ id }) => {
                     />
                     <Form.Control.Feedback
                       type="invalid"
-                      className="d-block text-pink"
+                      className="d-block text-danger"
                     >
                       {props.touched.email && props.errors.email}
                     </Form.Control.Feedback>
@@ -139,7 +139,7 @@ const Projects = ({ id }) => {
                     />
                     <Form.Control.Feedback
                       type="invalid"
-                      className="d-block text-pink"
+                      className="d-block text-danger"
                     >
                       {props.touched.message && props.errors.message}
                     </Form.Control.Feedback>
