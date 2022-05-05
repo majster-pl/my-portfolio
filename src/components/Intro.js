@@ -32,15 +32,18 @@ const Intro = ({ id }) => {
                 typingSpeed={50}
                 pauseTime={3500}
                 sentences={[
-                  "Hi! I'm Szymon, web developer and open source fan from Bristol, UK",
-                  "Get in touch if you need support with your website or you are looking to create a new one!",
+                  "Hi! I'm Szymon, Frontend Developer and open source contributor from Bristol, UK",
+                  // "Get in touch if you need support with your website or looking to create a new one!",
                 ]}
               />
             </p>
           </Col>
           <Col md={6} sm={8} className="text-center text-md-end">
             <Fade delay={500}>
-              <Image className="avatar-wobble m-2" src="/images/me.jpg" />
+              <Image
+                className="avatar-wobble m-2 unselectable"
+                src="/images/me.jpg"
+              />
             </Fade>
           </Col>
         </Row>

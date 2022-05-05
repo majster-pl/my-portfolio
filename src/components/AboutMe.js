@@ -13,9 +13,9 @@ const AboutMe = ({ id }) => {
         <div className="fs-3 fw-light">
           <Fade bottom>
             <p className="text-justify">
-              My name is Szymon, I'm a self taught freelance web developer based
-              in Bristol, UK. My coding journey started of as a hobby back in
-              2011 by developing Linux desktop applications using GTK and
+              My name is Szymon, I'm a self taught fronend developer based
+              in Bristol. My coding journey started of as a hobby back in
+              2011 by creating Linux desktop applications using GTK and
               Python. One of my desktop applications was{" "}
               <a
                 rel="noreferrer"
@@ -43,15 +43,15 @@ const AboutMe = ({ id }) => {
                 spy={true}
                 offset={-100}
               >
-                My Projects
+                my projects
               </Link>{" "}
-              and live pages to them.
+              and links to live pages to them.
             </p>
             <p className="text-justify">
               I love new technologies and gadgets, I'm always looking for a ways
-              to automate things to make a life easier. When possible I spend my
-              free time to teach my 7 years old son electronic and how to code
-              by experimenting with MicroBit and Raspberry Pi.
+              to automate things to make life easier. When possible I spend
+              my free time with my son to show him basics in electronic and coding
+              by experimenting with different projects on MicroBit and Raspberry Pi.
             </p>
           </Fade>
         </div>
