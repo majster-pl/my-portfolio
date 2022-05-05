@@ -26,5 +26,3 @@ To build and run **locally**:
 To build project for **production** run:
   
     npm run build
-
-Then upload project to the server.
