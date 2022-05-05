@@ -243,6 +243,7 @@ export const openLinkLogger = {
     "nodejs",
   ],
   git_page: "https://github.com/majster-pl/open-link-logger",
+  live_page: "http://majster.ddns.net:3900/",
   images: [
     "1.png",
     "2.png",
