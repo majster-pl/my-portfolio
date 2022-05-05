@@ -1,5 +1,6 @@
 import { Modal, CloseButton, Button, Spinner } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ButtonLink from "./ButtonLink";
 
 // Import Swiper styles
 import "swiper/css";
@@ -84,44 +85,31 @@ const ModalPreview = ({
       </Modal.Body>
       <Modal.Footer className="bg-secondary text-white">
         {typeof appPreviewData.live_page !== "undefined" ? (
-          <Button
-            variant="link"
-            className="pe-3"
-            href={appPreviewData.live_page}
-            target="_blank"
-            rel="noreferrer"
-            title="Open website with live project"
-          >
-            Live Page <i className="fa fa-external-link"></i>
-          </Button>
+          <ButtonLink
+            projectData={appPreviewData}
+            linkText="Live Page"
+            LinkIcon="fa-external-link"
+          />
         ) : (
           ""
         )}
 
         {typeof appPreviewData.git_page !== "undefined" ? (
-          <Button
-            variant="link"
-            className="ps-1"
-            href={appPreviewData.git_page}
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub <i className="fa fa-github" aria-hidden="true"></i>
-          </Button>
+          <ButtonLink
+            projectData={appPreviewData}
+            linkText="GitHub"
+            LinkIcon="fa-github"
+          />
         ) : (
           ""
         )}
 
         {typeof appPreviewData.store_page !== "undefined" ? (
-          <Button
-            variant="link"
-            className="ps-1"
-            href={appPreviewData.store_page}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Store <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-          </Button>
+          <ButtonLink
+            projectData={appPreviewData}
+            linkText="Store"
+            LinkIcon="fa-shopping-bag"
+          />
         ) : (
           ""
         )}

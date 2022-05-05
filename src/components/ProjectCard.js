@@ -12,6 +12,7 @@ import { Fade } from "react-reveal";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { css } from "@emotion/react";
 import PulseLoader from "react-spinners/PulseLoader";
+import ButtonLink from "./ButtonLink";
 
 const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
   const openModal = () => {
@@ -93,15 +94,15 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
         <Card.Body className="project-bg-image text-white pb-1">
           <Card.Title className="fs-3">{projectData.title}</Card.Title>
           <Card.Text className="fs-4">{projectData.description}</Card.Text>
-          <Row className="border-top align-items-center pt-1">
-            <Col className="mt-2">
+          <Row className="border-top align-items-center">
+            <Col className="border-end mt-2 pt-1 mb-1">
               <Row className="row-cols ">
                 <Col>
                   {projectData.skills.map((item, i) => {
                     return (
                       <Image
                         key={i}
-                        width="20rem"
+                        width="25rem"
                         className="shadow me-2 mb-2"
                         title={item}
                         src={`/images/logos/${item
@@ -113,50 +114,44 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
                 </Col>
               </Row>
             </Col>
-            <Col className="border-start">
-              {typeof projectData.live_page !== "undefined" ? (
-                <Button
-                  variant="link"
-                  className="p-0 m-0 px-3"
-                  onClick={(e) => onLinkClicked(e, projectData.live_page)}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Open website with live project"
-                >
-                  Live Page <i className="fa fa-external-link"></i>
-                </Button>
-              ) : (
-                ""
-              )}
+            <Col className="">
+              <Row className="justify-content-evenly">
+                {typeof projectData.live_page !== "undefined" ? (
+                  <Col className="col-12 col-md-6 my-2">
+                    <ButtonLink
+                      projectData={projectData}
+                      linkText="Live Page"
+                      LinkIcon="fa-external-link"
+                    />
+                  </Col>
+                ) : (
+                  ""
+                )}
 
-              {typeof projectData.git_page !== "undefined" ? (
-                <Button
-                  variant="link"
-                  className="p-0 m-0 px-3"
-                  onClick={(e) => onLinkClicked(e, projectData.git_page)}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub <i className="fa fa-github" aria-hidden="true"></i>
-                </Button>
-              ) : (
-                ""
-              )}
+                {typeof projectData.git_page !== "undefined" ? (
+                  <Col className="col-12 col-md-6 my-2">
+                    <ButtonLink
+                      projectData={projectData}
+                      linkText="GitHub"
+                      LinkIcon="fa-github"
+                    />
+                  </Col>
+                ) : (
+                  ""
+                )}
 
-              {typeof projectData.store_page !== "undefined" ? (
-                <Button
-                  variant="link"
-                  className="p-0 m-0 px-3"
-                  onClick={(e) => onLinkClicked(e, projectData.store_page)}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Store{" "}
-                  <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                </Button>
-              ) : (
-                ""
-              )}
+                {typeof projectData.store_page !== "undefined" ? (
+                  <Col className="col-12 col-md-6 my-2">
+                    <ButtonLink
+                      projectData={projectData}
+                      linkText="Store"
+                      LinkIcon="fa-shopping-bag"
+                    />
+                  </Col>
+                ) : (
+                  ""
+                )}
+              </Row>
             </Col>
           </Row>
         </Card.Body>

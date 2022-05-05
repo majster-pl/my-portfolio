@@ -103,8 +103,7 @@ body {
     min-height: 20rem;
 }
 
-.project-card-focus img,
-.project-card-focus .project-bg-image {
+.project-card-focus img {
     --myColor1    : rgb(73, 0, 80) !important;
     --myColor2    : rgb(10, 0, 100) !important;
     -webkit-filter: grayscale(0) !important;
