@@ -13,7 +13,7 @@ const AboutMe = ({ id }) => {
         <div className="fs-3 fw-light">
           <Fade bottom>
             <p className="text-justify">
-              My name is Szymon, I'm a self taught fronend developer based
+              My name is Szymon, I'm a self taught frontend developer based
               in Bristol. My coding journey started of as a hobby back in
               2011 by creating Linux desktop applications using GTK and
               Python. One of my desktop applications was{" "}
@@ -50,7 +50,7 @@ const AboutMe = ({ id }) => {
             <p className="text-justify">
               I love new technologies and gadgets, I'm always looking for a ways
               to automate things to make life easier. When possible I spend
-              my free time with my son to show him basics in electronic and coding
+              time with my son to show him basics in electronic and coding
               by experimenting with different projects on MicroBit and Raspberry Pi.
             </p>
           </Fade>
