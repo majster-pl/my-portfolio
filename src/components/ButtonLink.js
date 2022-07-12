@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-const ButtonLink = ({ projectData, linkText, LinkIcon }) => {
+const ButtonLink = ({ projectUrl, linkText, LinkIcon }) => {
   const onLinkClicked = (e, url) => {
     e.stopPropagation();
     window.open(url, "_blank").focus();
@@ -11,7 +11,7 @@ const ButtonLink = ({ projectData, linkText, LinkIcon }) => {
     <Button
       variant="link"
       className="p-0 px-1 link-pink"
-      onClick={(e) => onLinkClicked(e, projectData.live_page)}
+      onClick={(e) => onLinkClicked(e, projectUrl)}
       target="_blank"
       rel="noreferrer"
       title="Open website with live project"

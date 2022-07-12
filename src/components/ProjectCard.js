@@ -119,7 +119,7 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
                 {typeof projectData.live_page !== "undefined" ? (
                   <Col className="col-12 col-md-6 my-2">
                     <ButtonLink
-                      projectData={projectData}
+                      projectUrl={projectData.live_page}
                       linkText="Live Page"
                       LinkIcon="fa-external-link"
                     />
@@ -131,7 +131,7 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
                 {typeof projectData.git_page !== "undefined" ? (
                   <Col className="col-12 col-md-6 my-2">
                     <ButtonLink
-                      projectData={projectData}
+                      projectUrl={projectData.git_page}
                       linkText="GitHub"
                       LinkIcon="fa-github"
                     />
@@ -143,7 +143,7 @@ const ProjectCard = ({ projectData, openAppPreview, setAppPreviewData }) => {
                 {typeof projectData.store_page !== "undefined" ? (
                   <Col className="col-12 col-md-6 my-2">
                     <ButtonLink
-                      projectData={projectData}
+                      projectUrl={projectData.store_page}
                       linkText="Store"
                       LinkIcon="fa-shopping-bag"
                     />
