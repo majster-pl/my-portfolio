@@ -86,7 +86,7 @@ const ModalPreview = ({
       <Modal.Footer className="bg-secondary text-white">
         {typeof appPreviewData.live_page !== "undefined" ? (
           <ButtonLink
-            projectData={appPreviewData}
+            projectUrl={appPreviewData.live_page}
             linkText="Live Page"
             LinkIcon="fa-external-link"
           />
@@ -96,7 +96,7 @@ const ModalPreview = ({
 
         {typeof appPreviewData.git_page !== "undefined" ? (
           <ButtonLink
-            projectData={appPreviewData}
+            projectUrl={appPreviewData.git_page}
             linkText="GitHub"
             LinkIcon="fa-github"
           />
@@ -106,7 +106,7 @@ const ModalPreview = ({
 
         {typeof appPreviewData.store_page !== "undefined" ? (
           <ButtonLink
-            projectData={appPreviewData}
+            projectUrl={appPreviewData.store_page}
             linkText="Store"
             LinkIcon="fa-shopping-bag"
           />
