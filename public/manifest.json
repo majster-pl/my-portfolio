@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Szymon Waliczek portfolio",
+  "name": "Portfolio website created in React",
   "icons": [
     {
       "src": "favicon.ico",
