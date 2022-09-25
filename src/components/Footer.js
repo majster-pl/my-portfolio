@@ -20,7 +20,7 @@ function Footer() {
           <Nav.Link
             className="px-2 fs-3"
             rel="noreferrer"
-            href="https://www.linkedin.com/in/szymon-waliczek-%F0%9F%87%BA%F0%9F%87%A6-9a0ab2177"
+            href="https://www.linkedin.com/in/szymon-waliczek-9a0ab2177/"
             target="_blank"
           >
             <i className="fa fa-linkedin-square" aria-hidden="true"></i>
